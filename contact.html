@@ -45,31 +45,19 @@
       <p>We'd love to hear from you. Give us a call, or if email is more ideal, please use the form below to send an email with any questions or comments.</p>
 
       <div class="content">
-        <p><strong>Brian:</strong> (435)619-3709<br/><strong>R:</strong> (435)###-####</p>
+        <p><strong>Brian:</strong> (435)619-3709<br/><!--<strong>R:</strong> (435)###-####--></p>
       </div>
 
           <div class="content">
-            <form>
-              <div class="row collapse">
-                <div class="large-2 columns">
-                  <label class="inline">Your Name</label>
-                </div>
-                <div class="large-10 columns">
-                  <input type="text" id="yourName" placeholder="Enter your name">
-                </div>
-              </div>
-              <div class="row collapse">
-                <div class="large-2 columns">
-                  <label class="inline"> Your Email</label>
-                </div>
-                <div class="large-10 columns">
-                  <input type="text" id="yourEmail" placeholder="you@youremail.com">
-                </div>
-              </div>
-              <label>What's up?</label>
-              <textarea rows="4"></textarea>
-              <button type="submit" class="radius button">Submit</button>
-            </form>
+              <form action="/webformmailer.php" method="post">
+                  <input type="hidden" name="subject" value="Submission" />
+                  <input type="hidden" name="redirect" value="thankyou.html" />
+                  First Name: <input type="text" name="FirstName" />
+                  Last Name :<input type="text" name="LastName" />
+                  Email: <input type="text" name="email" />
+                  Comments: <textarea name="comments" cols="40" rows="10" placeholder="Type comments here."></textarea>
+                  <input type="submit" name="submit" value="submit"/>
+                  <input type="hidden" name="form_order" value="alpha"/> <input type="hidden" name="form_delivery" value="hourly_digest"/> <input type="hidden" name="form_format" value="html"/> </form>
           </div>
     </div>
  
